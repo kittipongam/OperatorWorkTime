@@ -92,7 +92,7 @@ var tableJoin= [ ]
                     pool.query(insertTimeIn,detailInsert, function show(error, data) {
                     if (error == null) {
                     console.log('insert-for-new-user')
-                    response.render('test.ejs',{title:"Employee Records",records:data,success:'Updated Time In - NEW'}) 
+                    response.render('home.ejs',{title:"Employee Records",records:data,success:'Updated Time In - NEW'}) 
                                                  }
                     else
                     console.log(error)
@@ -103,7 +103,7 @@ var tableJoin= [ ]
                     pool.query(updateTimeOut,detailUpdate, function show(error, data) {
                     if (error == null) {
                         console.log('insert-for-new-time-out')
-                        response.render('test.ejs',{title:"Employee Records",records:data,success:'Updated Time Out'})
+                        response.render('home.ejs',{title:"Employee Records",records:data,success:'Updated Time Out'})
                     }
                     else
                     console.log(error)
@@ -114,7 +114,7 @@ var tableJoin= [ ]
                     pool.query(insertTimeIn,detailInsert, function show(error, data) {
                         if (error == null) {
                             console.log('insert-for-new-time-in')
-                            response.render('test.ejs',{title:"Employee Records",records:data,success:'Updated Time In'})
+                            response.render('home.ejs',{title:"Employee Records",records:data,success:'Updated Time In'})
                                                      }
                         else
                         console.log(error)
@@ -125,7 +125,7 @@ var tableJoin= [ ]
             if(!(bufferCode.some(a => a.Employees_Code === f )))
             {
                 console.log('update')
-                response.render('test.ejs',{title:"Employee Records",records:data,success:'User Not Found'})
+                response.render('home.ejs',{title:"Employee Records",records:data,success:'User Not Found'})
             
             }
             

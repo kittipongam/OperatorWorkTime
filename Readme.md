@@ -2,13 +2,22 @@
 
 ## CONCEPT
 
+![image](https://user-images.githubusercontent.com/104770048/171844853-8cb33fc0-3a5d-4885-8a62-369e17936272.png)
+
+![image](https://user-images.githubusercontent.com/104770048/171844900-e61e84cb-6202-4a7e-a27d-cfb162e51f9e.png)
+
+
+
 ## SCHEMA CONCEPTUAL FOR DBMS
+
+![image](https://user-images.githubusercontent.com/104770048/171846034-2133d479-e69d-4a09-8b24-164bf246ac33.png)
+
 
 Create DATABASE 
 
 >
 
-    create database testname default charset'UTF8';
+    create database testreal default charset'UTF8';
 
 >
 
@@ -23,7 +32,7 @@ Create user
 GRANT TO USER CREATED
 
 >
-    grant all on testname.* to kittipot123;
+    grant all on testreal.* to kittipot123;
 
 >
 
@@ -63,6 +72,16 @@ Create Table user info
 
 >
 
+INSERT USER INFO
+
+>
+
+	insert into user(Employees_Code,First_name,Last_name) values(1234,”kittipot”,”po-ngam”);
+	insert into user(Employees_Code,First_name,Last_name) values(4321,”testfname”,”testlname”);
+	insert into user(Employees_Code,First_name,Last_name) values(5678,”mark”,”rober”);
+	insert into user(Employees_Code,First_name,Last_name) values(8765,”Mr”,”Beast”);
+
+>
 
 
 ## CODE
@@ -364,7 +383,7 @@ File: server.js
                         pool.query(insertTimeIn,detailInsert, function show(error, data) {
                         if (error == null) {
                         console.log('insert-for-new-user')
-                        response.render('test.ejs',{title:"Employee Records",records:data,success:'Updated Time In - NEW'}) 
+                        response.render('home.ejs',{title:"Employee Records",records:data,success:'Updated Time In - NEW'}) 
                                                     }
                         else
                         console.log(error)
@@ -375,7 +394,7 @@ File: server.js
                         pool.query(updateTimeOut,detailUpdate, function show(error, data) {
                         if (error == null) {
                             console.log('insert-for-new-time-out')
-                            response.render('test.ejs',{title:"Employee Records",records:data,success:'Updated Time Out'})
+                            response.render('home.ejs',{title:"Employee Records",records:data,success:'Updated Time Out'})
                         }
                         else
                         console.log(error)
@@ -386,7 +405,7 @@ File: server.js
                         pool.query(insertTimeIn,detailInsert, function show(error, data) {
                             if (error == null) {
                                 console.log('insert-for-new-time-in')
-                                response.render('test.ejs',{title:"Employee Records",records:data,success:'Updated Time In'})
+                                response.render('home.ejs',{title:"Employee Records",records:data,success:'Updated Time In'})
                                                         }
                             else
                             console.log(error)
@@ -397,7 +416,7 @@ File: server.js
                 if(!(bufferCode.some(a => a.Employees_Code === f )))
                 {
                     console.log('update')
-                    response.render('test.ejs',{title:"Employee Records",records:data,success:'User Not Found'})
+                    response.render('home.ejs',{title:"Employee Records",records:data,success:'User Not Found'})
                 
                 }
                 
@@ -412,6 +431,32 @@ File: server.js
 >
 
 # Result
+
+>
+	run node server.js 
+>
+
+>
+	http://localhost:12000/home
+>
+
+## HOME PAGE
+
+![image](https://user-images.githubusercontent.com/104770048/171846304-265108f6-a1f4-45f2-83f3-271af0e4b97a.png)<br>
+
+Case: User not found [Employee Code doesnot exist in user info] <br>
+![image](https://user-images.githubusercontent.com/104770048/171846643-51f5bb49-b4fa-40b4-bfed-8072ac2f9b17.png)<br>
+Case: Update Time in [Employee Code exist in user info with 1234]<br>
+![image](https://user-images.githubusercontent.com/104770048/171846683-fcaaf342-3b4a-4892-b54a-1fbfdd5744f5.png)<br>
+Case: Update Time Out [Employee Code exist in user info with 1234]<br>
+![image](https://user-images.githubusercontent.com/104770048/171846779-44e7febb-aad2-4a92-ab1f-1f6b6edf1f11.png)<br>
+
+## Database
+![image](https://user-images.githubusercontent.com/104770048/171846912-55702761-4101-4421-9dae-6b2c6d90f3ee.png)<br>
+
+2 case that just add for 1234 time in and out<br>
+![image](https://user-images.githubusercontent.com/104770048/171846987-277fef63-fb0c-4ec1-9de2-315d01835db5.png)<br>
+
 
 ## Development Plan
 

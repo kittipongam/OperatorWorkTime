@@ -19,17 +19,17 @@ server.engine("html",ejs.renderFile)
 //server.set('view engine', 'ejs');
 
 
-server.get(["/test"],showJoinPage)
-server.post(["/test"],readVerbPost,UpdateStatus)
+server.get(["/home"],showJoinPage)
+server.post(["/home"],readVerbPost,UpdateStatus)
 
-server.get(["/index"],updateDB)
+server.get(["/data"],updateDB)
 
 
 function updateDB(request,response){
     pool.query("select  Transaction_log.Transaction_Id ,Transaction_log.Employees_Code,user.First_name,user.Last_name ,Transaction_log.Time_In ,Transaction_log.Time_Out  FROM Transaction_log INNER JOIN user ON Transaction_log.Employees_Code = user.Employees_Code ;", function show(error, data) {
         if (error == null) {
             tableJoin = data
-            response.render('index.ejs', {tableInfo:tableJoin});
+            response.render('data.ejs', {tableInfo:tableJoin});
         }
         else
             console.log(error)
@@ -38,7 +38,7 @@ function updateDB(request,response){
 }
 
 function showJoinPage(request,response){
-    response.render('test.ejs',{title:"Employee Records",success:' '})
+    response.render('home.ejs',{title:"Employee Records",success:' '})
 }
 
 

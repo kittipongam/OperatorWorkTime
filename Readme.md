@@ -112,9 +112,9 @@ INSERT USER INFO
 
 Install Node Module
 
-express:
-MySQL: to install module mysql of DBMS
-ejs: Embedded JavaSCript
+express: <br>
+MySQL: to install module mysql of DBMS <br> <br>
+ejs: Embedded JavaSCript <br>
 
 >
     npm install express mysql ejs
@@ -339,6 +339,11 @@ File: server.js
 
     server.get(["/data"],updateDB)
 
+>
+
+<br>
+
+>
 
     function updateDB(request,response){
         pool.query("select  Transaction_log.Transaction_Id ,Transaction_log.Employees_Code,user.First_name,user.Last_name ,Transaction_log.Time_In ,Transaction_log.Time_Out  FROM Transaction_log INNER JOIN user ON Transaction_log.Employees_Code = user.Employees_Code ;", function show(error, data) {
@@ -351,6 +356,15 @@ File: server.js
         })
         
     }
+   
+   
+>
+
+<br>
+
+>
+
+    
 
     function showJoinPage(request,response){
         response.render('home.ejs',{title:"Employee Records",success:' '})
@@ -382,6 +396,12 @@ File: server.js
             else
                 console.log(error)
         })
+
+>
+
+<br>
+
+>
 
         
 
@@ -490,7 +510,8 @@ File: server.js
 
 <ul>
     <li>Add filter to Database table</li>
-    <li>Add Page to Add user into DATABASE(Table user):[ALSO Delete or update user]</li>
+    <li>Add Page to Add user into DATABASE(Table user):[ALSO Delete or update user</li>
+    <li>Add Login page for HR</li>
 </ul>
 
 ## Challenging for Me
@@ -499,5 +520,5 @@ File: server.js
     <li>Create by using Frontend FrameWork == REACT</li>
     <li>Create by using Frontend FrameWork == Angular</li>
     <li>Create by using Frontend FrameWork == Vue.js</li>
-    <li>***Use Cloud database</li>
+    <li>***Use Cloud database AWS</li>
 </ul>

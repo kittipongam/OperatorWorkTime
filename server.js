@@ -77,7 +77,7 @@ var tableJoin= [ ]
 
 
     var insertTimeIn ="insert into Transaction_log(Employees_Code,Time_In ) values(?,?);"
-    var updateTimeOut ="update  Transaction_log   set 	Time_Out =? where Employees_Code=?;"
+    var updateTimeOut ="update  Transaction_log   set 	Time_Out =? where Employees_Code=? ORDER BY Time_In DESC limit 1;"
     var detailInput=[f]
     var detailInsert =[f,e]
     var detailUpdate =[e,f]

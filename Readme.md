@@ -1,8 +1,13 @@
 # INTRODUCTION
+Here is simple PRoject for make web application by using Node.js to make Operator work time for timestamp In and Out
+
+ ----*RU*---- opetation
 
 ## CONCEPT
 
-![image](https://user-images.githubusercontent.com/104770048/171844853-8cb33fc0-3a5d-4885-8a62-369e17936272.png)
+<p align="center">  
+	<img width="75%" src="https://user-images.githubusercontent.com/104770048/171844853-8cb33fc0-3a5d-4885-8a62-369e17936272.png"> <br>	
+</p>
 
 ![image](https://user-images.githubusercontent.com/104770048/171844900-e61e84cb-6202-4a7e-a27d-cfb162e51f9e.png)
 
@@ -12,6 +17,25 @@
 
 ![image](https://user-images.githubusercontent.com/104770048/171846034-2133d479-e69d-4a09-8b24-164bf246ac33.png)
 
+
+Run sqld for demon server
+
+>
+
+    mysqld --console
+
+>
+
+
+
+Run client for database
+
+>
+
+    mysql --user root --password
+
+
+>
 
 Create DATABASE 
 
@@ -86,11 +110,11 @@ INSERT USER INFO
 
 ## CODE
 
-Install Node 
+Install Node Module
 
 express:
-mysql:
-ejs:
+MySQL: to install module mysql of DBMS
+ejs: Embedded JavaSCript
 
 >
     npm install express mysql ejs
@@ -442,21 +466,25 @@ File: server.js
 
 ## HOME PAGE
 
-![image](https://user-images.githubusercontent.com/104770048/171846304-265108f6-a1f4-45f2-83f3-271af0e4b97a.png)<br>
-
-Case: User not found [Employee Code doesnot exist in user info] <br>
-![image](https://user-images.githubusercontent.com/104770048/171846643-51f5bb49-b4fa-40b4-bfed-8072ac2f9b17.png)<br>
-Case: Update Time in [Employee Code exist in user info with 1234]<br>
-![image](https://user-images.githubusercontent.com/104770048/171846683-fcaaf342-3b4a-4892-b54a-1fbfdd5744f5.png)<br>
-Case: Update Time Out [Employee Code exist in user info with 1234]<br>
-![image](https://user-images.githubusercontent.com/104770048/171846779-44e7febb-aad2-4a92-ab1f-1f6b6edf1f11.png)<br>
+<p align="center">
+	<img width="75%" src="https://user-images.githubusercontent.com/104770048/171846304-265108f6-a1f4-45f2-83f3-271af0e4b97a.png"> <br>
+	Case: User not found [Employee Code doesnot exist in user info] <br>
+	<img width="75%" src="https://user-images.githubusercontent.com/104770048/171846643-51f5bb49-b4fa-40b4-bfed-8072ac2f9b17.png"> <br>
+	Case: Update Time in [Employee Code exist in user info with 1234]<br>
+	<img width="75%" src="https://user-images.githubusercontent.com/104770048/171846683-fcaaf342-3b4a-4892-b54a-1fbfdd5744f5.png"> <br>
+	Case: Update Time Out [Employee Code exist in user info with 1234]<br>
+	<img width="75%" src="https://user-images.githubusercontent.com/104770048/171846779-44e7febb-aad2-4a92-ab1f-1f6b6edf1f11.png"> <br>
+</p>
 
 ## Database
-![image](https://user-images.githubusercontent.com/104770048/171846912-55702761-4101-4421-9dae-6b2c6d90f3ee.png)<br>
+<p align="center">
+	<img width="75%" src="https://user-images.githubusercontent.com/104770048/171846912-55702761-4101-4421-9dae-6b2c6d90f3ee.png"> <br>
+</p>
 
-2 case that just add for 1234 time in and out<br>
-![image](https://user-images.githubusercontent.com/104770048/171846987-277fef63-fb0c-4ec1-9de2-315d01835db5.png)<br>
-
+<p align="center">
+	2 case that just add for 1234 time in and out<br>
+	<img width="75%" src="https://user-images.githubusercontent.com/104770048/171846987-277fef63-fb0c-4ec1-9de2-315d01835db5.png"> <br>
+</p>
 
 ## Development Plan
 

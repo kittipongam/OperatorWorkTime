@@ -63,7 +63,7 @@ GRANT TO USER CREATED
 USE DATABASE
 
 >
-    use testname
+    use testreal
 
 >
 

@@ -506,7 +506,7 @@ File: server.js
 </p>
 <br>
 
-### last 6 cases that just add for 1234 time in and out<br>
+### last 6 cases that just added<br>
  
 <p align="center">
 	<img width="75%" src="https://user-images.githubusercontent.com/104770048/172796859-212fcf69-04df-4d40-ab2b-396fcd22d5d1.png"> <br>

@@ -74,8 +74,6 @@ var tableJoin= [ ]
     var e = request.body["time"]  || ""
 
     var queryTimeOut ="select * from Transaction_log where Employees_Code = ? ORDER BY Time_In DESC limit 1;"
-
-
     var insertTimeIn ="insert into Transaction_log(Employees_Code,Time_In ) values(?,?);"
     var updateTimeOut ="update  Transaction_log   set 	Time_Out =? where Employees_Code=? ORDER BY Time_In DESC limit 1;"
     var detailInput=[f]

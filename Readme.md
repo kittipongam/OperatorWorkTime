@@ -63,7 +63,7 @@ GRANT TO USER CREATED
 USE DATABASE
 
 >
-    use testname
+    use testreal
 
 >
 
@@ -486,24 +486,45 @@ File: server.js
 
 ## HOME PAGE
 
+
 <p align="center">
-	<img width="75%" src="https://user-images.githubusercontent.com/104770048/171846304-265108f6-a1f4-45f2-83f3-271af0e4b97a.png"> <br>
+	<img width="75%" src="https://user-images.githubusercontent.com/104770048/172795791-839eb903-1a11-41f4-b7d4-35563eec669b.png"> <br>
 	Case: User not found [Employee Code doesnot exist in user info] <br>
-	<img width="75%" src="https://user-images.githubusercontent.com/104770048/171846643-51f5bb49-b4fa-40b4-bfed-8072ac2f9b17.png"> <br>
-	Case: Update Time in [Employee Code exist in user info with 1234]<br>
-	<img width="75%" src="https://user-images.githubusercontent.com/104770048/171846683-fcaaf342-3b4a-4892-b54a-1fbfdd5744f5.png"> <br>
-	Case: Update Time Out [Employee Code exist in user info with 1234]<br>
-	<img width="75%" src="https://user-images.githubusercontent.com/104770048/171846779-44e7febb-aad2-4a92-ab1f-1f6b6edf1f11.png"> <br>
+	<img width="75%" src="https://user-images.githubusercontent.com/104770048/172796179-9a036bca-8cb1-4765-947b-1a1286b3ff30.png"> <br>
+	Case: Update Time in [Employee Code exist in user info with 4321]<br>
+	<img width="75%" src="https://user-images.githubusercontent.com/104770048/172796556-a5dac73a-aa26-43f0-922d-ff634fe66344.png"> <br>
+	Case: Update Time Out [Employee Code exist in user info with 4321]<br>
+	<img width="75%" src="https://user-images.githubusercontent.com/104770048/172796319-6e396717-6e57-4db0-b950-dc26dbd65727.png"> <br>
 </p>
 
 ## Database
-<p align="center">
-	<img width="75%" src="https://user-images.githubusercontent.com/104770048/171846912-55702761-4101-4421-9dae-6b2c6d90f3ee.png"> <br>
-</p>
+
+### Database page<br>
 
 <p align="center">
-	2 case that just add for 1234 time in and out<br>
-	<img width="75%" src="https://user-images.githubusercontent.com/104770048/171846987-277fef63-fb0c-4ec1-9de2-315d01835db5.png"> <br>
+	<img width="75%" src="https://user-images.githubusercontent.com/104770048/172796728-1221c82d-6475-47c0-9418-1859892de57e.png"> <br>
+</p>
+<br>
+
+### last 6 cases that just added<br>
+ 
+<p align="center">
+	<img width="75%" src="https://user-images.githubusercontent.com/104770048/172796859-212fcf69-04df-4d40-ab2b-396fcd22d5d1.png"> <br>
+</p>
+<br>
+
+### SQL client table<br>
+ 
+
+
+>
+ 	select  Transaction_log.Transaction_Id ,Transaction_log.Employees_Code,user.First_name,user.Last_name ,Transaction_log.Time_In ,Transaction_log.Time_Out  FROM Transaction_log INNER JOIN user ON Transaction_log.Employees_Code = user.Employees_Code ;
+
+>
+<br>
+
+<p align="center">
+	<img width="75%" src="https://user-images.githubusercontent.com/104770048/172797465-0944c127-48d3-4c0a-b202-29670d4b8cc9.png"> <br>
 </p>
 
 ## Development Plan
